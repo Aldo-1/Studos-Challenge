@@ -5,7 +5,9 @@ const theme = {
     grey: '#DCECFA',
     red: '#E65353',
     texts: '#A7A9AB',
-    white: '#FFFFFF'
+    white: '#FFFFFF',
+    brown: '#ed8721',
+    green: '#02c4c4',
   },
   font: {
     fontFamily:
