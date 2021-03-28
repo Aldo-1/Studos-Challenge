@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should render the component 1`] = `
+<header
+  class="header-0-2-1"
+>
+  <div
+    class="user-0-2-2 user-d0-0-2-4"
+  >
+    <img
+      alt="Foto do usuario"
+      src="profile_image.png"
+    />
+    <h2>
+      Olá, João Paulo
+    </h2>
+  </div>
+  <div
+    class="darkMode-0-2-3 darkMode-d1-0-2-5"
+  >
+    <span>
+      Modo escuro
+    </span>
+    <label
+      class="switch-0-2-6"
+    >
+      <input
+        class="inputCheck-0-2-8"
+        type="checkbox"
+        value=""
+      />
+      <span
+        class="slider-0-2-7 slider-d0-0-2-10 round-0-2-9 round-d1-0-2-11"
+      />
+    </label>
+  </div>
+</header>
+`;

@@ -3,7 +3,7 @@ import User from 'assets/images/profile_image.png'
 import Toggle from 'components/Toggle'
 import { useTheme } from 'react-jss'
 
-const Header = ({ children }) => {
+const Header = () => {
   const theme = useTheme()
   const classes = useStyles({ theme })
   return (
