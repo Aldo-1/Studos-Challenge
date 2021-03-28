@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react'
-import { renderWithTheme } from '../../utils/test/helper'
+import { renderWithTheme } from 'utils/test/helper'
 import IlustrationTraining from 'assets/images/ilustration_training.svg'
 import Background from 'assets/images/bg-green.svg'
 import theme from 'styles/theme'

@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react'
-import { renderWithTheme } from '../../utils/test/helper'
+import { renderWithTheme } from 'utils/test/helper'
 import Card from './index'
 import BgDarkBlue from 'assets/images/bg-blue_card.svg'
 import BgBlue from 'assets/images/bg-blue_light.svg'

@@ -2,13 +2,13 @@
 
 exports[`<Card /> should render the component 1`] = `
 <div
-  class="Content-0-2-1 Content-d0-0-2-7"
+  class="content-0-2-1 content-d0-0-2-6"
 >
   <div
-    class="HeaderCard-0-2-2"
+    class="headerCard-0-2-2"
   >
     <div
-      class="Hour-0-2-3 Hour-d1-0-2-8"
+      class="hour-0-2-3 hour-d1-0-2-7"
     >
       <img
         alt="Um relógio"
@@ -27,16 +27,14 @@ exports[`<Card /> should render the component 1`] = `
     />
   </div>
   <h1
-    class="Title-0-2-4 Title-d2-0-2-9"
+    class="title-0-2-4 title-d2-0-2-8"
   >
     Lista 03 - Fisica Moderna - Modulo 1 - Modulo 2 - Aula 4
   </h1>
   <div
-    class="FooterCard-0-2-5"
+    class="footerCard-0-2-5"
   >
-    <div
-      class="Class-0-2-6"
-    >
+    <div>
       <span>
         Matemática
       </span>

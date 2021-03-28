@@ -39,7 +39,8 @@ const useStyles = createUseStyles({
 
     },
     '&:focus + $slider': {
-      boxShadow: '0 0 1px #2196F3'
+      boxShadow: '0 0 4px #2196F3',
+
     },
     '&:checked + $slider:before': {
       transform: 'translateX(26px)'
