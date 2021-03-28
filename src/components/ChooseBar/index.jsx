@@ -1,11 +1,10 @@
 import useStyles from './styles'
 import { useTheme } from 'react-jss'
 import { useState } from 'react'
-
 import Tab from 'components/Tab'
 import CardList from 'components/CardList'
-import cards from 'components/CardList/mock'
 import useFetchMock from 'hooks/useFetchMock'
+
 const ChooseBar = () => {
   const { newsActive, movementsActive, finishedActive } = useFetchMock()
   const [activeIndex, setActiveIndex] = useState(0)
@@ -13,10 +12,10 @@ const ChooseBar = () => {
     setActiveIndex(id)
   }
   const theme = useTheme()
-  const classes = useStyles({ theme })
+  const classes = useStyles({ activeIndex, theme })
   return (
     <>
-      <nav>
+      <nav className={classes.tabs}>
         <ul>
           {['Novas', 'Em andamento', 'Finalizadas'].map((item, id) => <Tab
             key={item}
@@ -26,14 +25,14 @@ const ChooseBar = () => {
           />)}
         </ul>
       </nav>
-      <div>
-        <CardList cards={cards} />
+      <div className={classes.content}>
+        <CardList cards={newsActive} />
       </div>
-      <div>
-        <CardList cards={cards} />
+      <div className={classes.content}>
+        <CardList cards={movementsActive} />
       </div>
-      <div>
-        <CardList cards={cards} />
+      <div className={classes.content}>
+        <CardList cards={finishedActive} />
       </div>
     </>
   )

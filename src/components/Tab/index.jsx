@@ -19,6 +19,8 @@ Tab.defaultProps = {
 
 Tab.propTypes = {
   active: PropTypes.bool,
+  handleClick: PropTypes.func,
+  label: PropTypes.string
 }
 
 

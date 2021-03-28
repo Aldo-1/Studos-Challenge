@@ -1,6 +1,8 @@
 import useStyles from './styles'
 import { useTheme } from 'react-jss'
 import Card from 'components/Card'
+import PropTypes from 'prop-types';
+
 const CardList = ({ cards }) => {
   const theme = useTheme()
   const classes = useStyles({ theme })
@@ -22,6 +24,10 @@ const CardList = ({ cards }) => {
       ))}
     </ul>
   )
+}
+
+CardList.propTypes = {
+  cards: PropTypes.array
 }
 
 export default CardList
