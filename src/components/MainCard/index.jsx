@@ -1,7 +1,7 @@
 import useStyles from './styles'
 import { useTheme } from 'react-jss'
 import Arrow from 'assets/images/arrow.svg'
-
+import PropTypes from 'prop-types';
 
 const MainCard = ({ title, colors, image, background }) => {
   const theme = useTheme()
@@ -20,5 +20,13 @@ const MainCard = ({ title, colors, image, background }) => {
     </div>
   )
 }
+
+MainCard.propTypes = {
+  title: PropTypes.string,
+  colors: PropTypes.string,
+  image: PropTypes.string,
+  background: PropTypes.string,
+}
+
 
 export default MainCard

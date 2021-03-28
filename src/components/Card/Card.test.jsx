@@ -30,14 +30,14 @@ describe('<Card />', () => {
   })
 
   it('should render the bgBlueDark', () => {
-    const { container } = renderWithTheme(<Card {...props} type="1" />)
+    const { container } = renderWithTheme(<Card {...props} type={1} />)
     expect(container.firstChild).toHaveStyle({
       background: `url(${BgDarkBlue}) no-repeat center center / cover, ${theme.colors['darkBlue']}`,
     })
   })
 
   it('should render the bgBlue', () => {
-    const { container } = renderWithTheme(<Card {...props} type="0" />)
+    const { container } = renderWithTheme(<Card {...props} type={0} />)
     expect(container.firstChild).toHaveStyle({
       background: `url(${BgBlue}) no-repeat center center / cover, ${theme.colors['blue']}`,
     })

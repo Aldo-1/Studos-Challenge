@@ -4,6 +4,7 @@ import Clock from 'assets/images/clock.svg'
 import Cloud from 'assets/images/cloud.svg'
 import BgDarkBlue from 'assets/images/bg-blue_card.svg'
 import BgBlue from 'assets/images/bg-blue_light.svg'
+import PropTypes from 'prop-types';
 
 const Card = ({ date, hour, title, subject, teacher, questionsCompleted, questions, type }) => {
   const theme = useTheme()
@@ -27,6 +28,17 @@ const Card = ({ date, hour, title, subject, teacher, questionsCompleted, questio
       </div>
     </div>
   )
+}
+
+Card.propTypes = {
+  date: PropTypes.string,
+  hour: PropTypes.string,
+  title: PropTypes.string,
+  subject: PropTypes.string,
+  teacher: PropTypes.string,
+  questionsCompleted: PropTypes.string,
+  questions: PropTypes.string,
+  type: PropTypes.number
 }
 
 export default Card
