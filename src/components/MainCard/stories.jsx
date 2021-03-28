@@ -1,8 +1,7 @@
 import MainCard from "./index";
+import IlustrationHome from 'assets/images/ilustration_homework.svg'
 import IlustrationTraining from 'assets/images/ilustration_training.svg'
 import Background from 'assets/images/bg-green.svg'
-import IlustrationHome from 'assets/images/ilustration_homework.svg'
-
 import BackgroundBlue from 'assets/images/bg.svg'
 
 export default {
