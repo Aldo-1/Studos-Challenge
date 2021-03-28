@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> should render the container 1`] = `
+<div
+  class="container-0-2-1 container-d0-0-2-2"
+>
+  Container
+</div>
+`;

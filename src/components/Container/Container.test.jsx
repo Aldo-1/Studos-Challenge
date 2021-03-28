@@ -1,14 +1,18 @@
-import { render, screen } from '@testing-library/react'
-
+import { screen } from '@testing-library/react'
+import { renderWithTheme } from 'utils/test/helper'
 import Container from './index'
 
 describe('<Container />', () => {
-  it('should render the heading', () => {
-  const { container } = render(
-  <Container />)
+  it('should render the container', () => {
+    const { container } = renderWithTheme(<Container>Container</Container>)
 
-  expect(screen.getByRole('heading', { name: /Container/i })).toBeInTheDocument()
+    expect(container.firstChild).toHaveStyle({
+      width: '100%',
+      maxWidth: '114rem',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    })
 
-  expect(container.firstChild).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
