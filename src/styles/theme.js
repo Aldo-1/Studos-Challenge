@@ -8,7 +8,8 @@ const theme = {
     white: '#FFFFFF',
     brown: '#ed8721',
     green: '#02c4c4',
-    silver: '#c4c4c4'
+    silver: '#c4c4c4',
+    grape: '#414042'
   },
   font: {
     fontFamily:
@@ -31,7 +32,7 @@ const theme = {
     xxsmall: '0.4rem',
     xsmall: '1.2rem',
     small: '1.6rem',
-    medium: '3.0rem',
+    medium: '2.4rem',
     large: '3.6rem',
     xlarge: '4.8rem'
   },

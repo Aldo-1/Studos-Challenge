@@ -1,7 +1,9 @@
 import useStyles from './styles'
+import { useTheme } from 'react-jss'
 
 const {{pascalCase name}} = ({children}) => {
-  const classes = useStyles()
+  const theme = useTheme()
+  const classes = useStyles({theme})
     return (
       <h1 className={classes.myLabel}>
         {{pascalCase name}}
