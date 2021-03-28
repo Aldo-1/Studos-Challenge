@@ -2,15 +2,23 @@ import useStyles from './styles'
 import { useTheme } from 'react-jss'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import Tab from '../Tab'
+import Tab from 'components/Tab'
+import CardList from 'components/CardList'
+import cards from 'components/CardList/mock'
 
 const ChooseBar = () => {
   const [newsActive, setNewsActive] = useState([])
   const [movementsActive, setMovementsActive] = useState([])
   const [finishedActive, setFinishedActive] = useState([])
 
+  const [activeIndex, setActiveIndex] = useState(0)
+
   const theme = useTheme()
   const classes = useStyles({ theme })
+
+  const handleOnClick = (id) => {
+    setActiveIndex(id)
+  }
 
   const filterActiveCards = (item) => {
     return item.started
@@ -76,9 +84,23 @@ const ChooseBar = () => {
     <>
       <nav>
         <ul>
-          {['Novas', 'Em andamento', 'Finalizadas'].map((item) => <Tab key={item} label={item} />)}
+          {['Novas', 'Em andamento', 'Finalizadas'].map((item, id) => <Tab
+            key={item}
+            label={item}
+            active={activeIndex === id}
+            handleClick={() => handleOnClick(id)}
+          />)}
         </ul>
       </nav>
+      <div>
+        <CardList cards={cards} />
+      </div>
+      <div>
+        <CardList cards={cards} />
+      </div>
+      <div>
+        <CardList cards={cards} />
+      </div>
     </>
   )
 }
