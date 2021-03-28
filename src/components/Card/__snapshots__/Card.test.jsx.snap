@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should render the component 1`] = `
+<div
+  class="Content-0-2-1 Content-d0-0-2-7"
+>
+  <div
+    class="HeaderCard-0-2-2"
+  >
+    <div
+      class="Hour-0-2-3 Hour-d1-0-2-8"
+    >
+      <img
+        alt="Um relógio"
+        src="clock.svg"
+      />
+      <span>
+        Até 
+        02/06
+         
+        8h30
+      </span>
+    </div>
+    <img
+      alt="Uma nuuvem com um check"
+      src="cloud.svg"
+    />
+  </div>
+  <h1
+    class="Title-0-2-4 Title-d2-0-2-9"
+  >
+    Lista 03 - Fisica Moderna - Modulo 1 - Modulo 2 - Aula 4
+  </h1>
+  <div
+    class="FooterCard-0-2-5"
+  >
+    <div
+      class="Class-0-2-6"
+    >
+      <span>
+        Matemática
+      </span>
+      <span>
+        Ricardo
+      </span>
+    </div>
+    <span>
+      0
+      /
+      100
+    </span>
+  </div>
+</div>
+`;
