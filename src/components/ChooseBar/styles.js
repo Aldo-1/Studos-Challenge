@@ -1,8 +1,15 @@
-import {createUseStyles} from 'react-jss'
+import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
-  myLabel: {
-    fontStyle: 'italic'
+  tabs: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  content: {
+    display: 'none'
+  },
+  active: {
+    display: 'block'
   }
 })
 

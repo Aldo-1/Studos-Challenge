@@ -14,7 +14,7 @@ const CardList = ({ cards }) => {
             date={item.date}
             hour={item.hour}
             title={item.title}
-            subject={item.subjet}
+            subject={item.subject}
             teacher={item.teacher}
             questionsCompleted={item.questionsCompleted}
             questions={item.questions}

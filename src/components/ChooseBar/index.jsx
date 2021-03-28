@@ -12,11 +12,11 @@ const ChooseBar = () => {
     setActiveIndex(id)
   }
   const theme = useTheme()
-  const classes = useStyles({ activeIndex, theme })
+  const classes = useStyles({ theme })
   return (
     <>
-      <nav className={classes.tabs}>
-        <ul>
+      <nav >
+        <ul className={classes.tabs}>
           {['Novas', 'Em andamento', 'Finalizadas'].map((item, id) => <Tab
             key={item}
             label={item}
@@ -25,13 +25,13 @@ const ChooseBar = () => {
           />)}
         </ul>
       </nav>
-      <div className={classes.content}>
+      <div className={`${classes.content} ${activeIndex === 0 && classes.active}`}>
         <CardList cards={newsActive} />
       </div>
-      <div className={classes.content}>
+      <div className={`${classes.content} ${activeIndex === 1 && classes.active}`}>
         <CardList cards={movementsActive} />
       </div>
-      <div className={classes.content}>
+      <div className={`${classes.content} ${activeIndex === 2 && classes.active}`} >
         <CardList cards={finishedActive} />
       </div>
     </>

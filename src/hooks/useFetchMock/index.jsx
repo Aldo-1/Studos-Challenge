@@ -5,12 +5,20 @@ const useFetchMock = () => {
   const [movementsActive, setMovementsActive] = useState([])
   const [finishedActive, setFinishedActive] = useState([])
 
+  const transformDateToCard = (item) => {
+    const date_array = item.date.split('-')
+    return {
+      ...item,
+      date: `${date_array[2]}/${date_array[1]}`
+    }
+  }
 
   const filterActiveCards = (item) => {
     return item.started
   }
 
   const filterNews = (item) => {
+    console.log(item)
     return !item.started && item.questionsCompleted !== item.questions
   }
 
@@ -20,9 +28,7 @@ const useFetchMock = () => {
 
   const transformDate = (item) => {
     const date = new Date(item.date)
-
     if (isNaN(date.getTime())) {
-
       const to_split = item.date.includes('/') ? '/' : '-'
       const transformed_date = item.date.split(to_split)
       return { ...item, date: `${transformed_date[2]}-${transformed_date[1]}-${transformed_date[0]}` }
@@ -50,18 +56,23 @@ const useFetchMock = () => {
       setMovementsActive(cards.filter(item => filterActiveCards(item))
         .map(item => transformDate(item))
         .slice()
-        .sort((a, b) => new Date(b.date) - new Date(a.date)))
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .map(item => transformDateToCard(item))
+      )
       setNewsActive(cards
         .filter(item => filterNews(item))
         .map(item => transformDate(item))
         .slice()
-        .sort((a, b) => new Date(b.date) - new Date(a.date)))
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .map(item => transformDateToCard(item))
+      )
       setFinishedActive(cards
         .filter(item => filterFinished(item))
-        .map(item => transformDate(item)
-          .slice()
-          .sort((a, b) => new Date(b.date) - new Date(a.date))
-        ))
+        .map(item => transformDate(item))
+        .slice()
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .map(item => transformDateToCard(item))
+      )
     }
     loadMock()
   }, [])
