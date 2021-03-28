@@ -2,6 +2,7 @@ import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
   list: ({ theme }) => ({
+    listStyle: 'none',
     '& li': {
       marginTop: theme.spacings.small
     },

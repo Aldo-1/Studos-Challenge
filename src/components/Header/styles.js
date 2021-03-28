@@ -4,7 +4,8 @@ const useStyles = createUseStyles({
   header: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingTop: '2rem'
   },
   user: ({ theme }) => ({
     display: 'flex',
