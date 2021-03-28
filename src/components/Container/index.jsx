@@ -1,5 +1,6 @@
 import useStyles from './styles'
 import { useTheme } from 'react-jss'
+import PropTypes from 'prop-types';
 
 const Container = ({ children }) => {
   const theme = useTheme()
@@ -9,6 +10,10 @@ const Container = ({ children }) => {
       {children}
     </div>
   )
+}
+
+Container.propTypes = {
+  children: PropTypes.node
 }
 
 export default Container

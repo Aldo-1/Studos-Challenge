@@ -6,9 +6,16 @@ const useStyles = createUseStyles({
     maxWidth: theme.grid.container,
     marginLeft: 'auto',
     marginRight: 'auto',
-    paddingLeft: theme.grid.gutter,
-    paddingRight: theme.grid.gutter,
-  })
+    paddingLeft: `calc(${theme.grid.gutter} / 3)`,
+    paddingRight: `calc(${theme.grid.gutter} / 3)`,
+
+  }),
+  '@media (min-width: 767px)': {
+    container: ({ theme }) => ({
+      paddingLeft: theme.grid.gutter,
+      paddingRight: theme.grid.gutter,
+    })
+  }
 })
 
 export default useStyles;
