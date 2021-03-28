@@ -3,6 +3,7 @@ import Container from 'components/Container'
 import Header from 'components/Header'
 
 import mock from 'utils/mock/mock'
+import ChooseBar from '../components/ChooseBar'
 
 
 function Studos() {
@@ -21,9 +22,7 @@ function Studos() {
               ></MainCard>
             </li>))}
         </ul>
-        <aside>
-          Side bar
-        </aside>
+        <ChooseBar />
       </main>
     </Container>
   )
