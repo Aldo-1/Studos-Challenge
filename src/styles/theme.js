@@ -1,4 +1,8 @@
 const theme = {
+  grid: {
+    container: '114rem',
+    gutter: '3.0rem',
+  },
   colors: {
     darkBlue: '#2555EF',
     blue: '#339CF7',
