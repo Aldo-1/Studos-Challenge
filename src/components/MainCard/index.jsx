@@ -1,5 +1,4 @@
 import useStyles from './styles'
-
 import { useTheme } from 'react-jss'
 import Arrow from 'assets/images/arrow.svg'
 
