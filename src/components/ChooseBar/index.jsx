@@ -2,6 +2,7 @@ import useStyles from './styles'
 import { useTheme } from 'react-jss'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import Tab from '../Tab'
 
 const ChooseBar = () => {
   const [newsActive, setNewsActive] = useState([])
@@ -43,8 +44,6 @@ const ChooseBar = () => {
 
   }
 
-
-
   useEffect(() => {
     const loadMock = async () => {
       const response = await axios.get('https://run.mocky.io/v3/865096e8-cdb8-49d7-b548-6488db4c8129', {
@@ -77,9 +76,7 @@ const ChooseBar = () => {
     <>
       <nav>
         <ul>
-          <li>Novas</li>
-          <li>Em andamento</li>
-          <li>Finalizadas</li>
+          {['Novas', 'Em andamento', 'Finalizadas'].map((item) => <Tab key={item} label={item} />)}
         </ul>
       </nav>
     </>

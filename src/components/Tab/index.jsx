@@ -2,11 +2,11 @@ import useStyles from './styles'
 import { useTheme } from 'react-jss'
 import PropTypes from 'prop-types';
 
-const Tab = ({ active, label }) => {
+const Tab = ({ handleClick, active, label }) => {
   const theme = useTheme()
   const classes = useStyles({ active, theme })
   return (
-    <li className={classes.tab}>
+    <li className={classes.tab} onClick={handleClick}>
       {label}
     </li>
   )
