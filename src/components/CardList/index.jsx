@@ -5,7 +5,7 @@ const CardList = ({ cards }) => {
   const theme = useTheme()
   const classes = useStyles({ theme })
   return (
-    <ul className={classes.list}>
+    !!cards.length && <ul className={classes.list}>
       {cards.map((item, id) => (
         <li key={`${item.title}-${id}`}>
           <Card
