@@ -1,10 +1,7 @@
 import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
-  myLabel: {
-    fontStyle: 'italic'
-  },
-  Switch: {
+  switch: {
     position: 'relative',
     display: 'inline-block',
     width: '5.8rem',
@@ -16,7 +13,7 @@ const useStyles = createUseStyles({
 
     }
   },
-  Slider: ({ theme }) => ({
+  slider: ({ theme }) => ({
     position: 'absolute',
     cursor: 'pointer',
     top: 0,
@@ -36,19 +33,19 @@ const useStyles = createUseStyles({
       transition: '.4s'
     }
   }),
-  InputCheck: {
-    '&:checked + $Slider': {
+  inputCheck: {
+    '&:checked + $slider': {
       backgroundColor: '#2196F3',
 
     },
-    '&:focus + $Slider': {
+    '&:focus + $slider': {
       boxShadow: '0 0 1px #2196F3'
     },
-    '&:checked + $Slider:before': {
+    '&:checked + $slider:before': {
       transform: 'translateX(26px)'
     },
   },
-  Round: ({ theme }) => ({
+  round: ({ theme }) => ({
     borderRadius: theme.border.radius_check,
     '&:before': {
       borderRadius: theme.border.radius_circle

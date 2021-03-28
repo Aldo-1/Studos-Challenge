@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
-  Content: ({ background, theme, type }) => ({
+  content: ({ background, theme, type }) => ({
     background: `url(${background}) no-repeat center center / cover, ${type === 1 ? theme.colors['darkBlue'] : theme.colors['blue']}`,
     '& span': {
       display: 'block',
@@ -11,12 +11,12 @@ const useStyles = createUseStyles({
     borderRadius: theme.border.radius,
     padding: theme.spacings.xsmall
   }),
-  HeaderCard: {
+  headerCard: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center'
   },
-  Hour: ({ theme }) => ({
+  hour: ({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     background: theme.colors.red,
@@ -27,7 +27,7 @@ const useStyles = createUseStyles({
       marginLeft: '0.8rem'
     }
   }),
-  Title: ({ theme }) => ({
+  title: ({ theme }) => ({
     fontSize: theme.font.sizes.small,
     color: theme.colors.white,
     lineHeight: '1.9rem',
@@ -35,13 +35,10 @@ const useStyles = createUseStyles({
     margin: `${theme.spacings.small} 0`,
     fontWeight: theme.font.bold
   }),
-  FooterCard: {
+  footerCard: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center'
-  },
-  Class: {
-
   }
 })
 

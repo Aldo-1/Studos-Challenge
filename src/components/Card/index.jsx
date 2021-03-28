@@ -9,16 +9,16 @@ const Card = ({ date, hour, title, subject, teacher, questionsCompleted, questio
   const theme = useTheme()
   const classes = useStyles({ theme, type, background: type === 1 ? BgDarkBlue : BgBlue })
   return (
-    <div className={classes.Content}>
-      <div className={classes.HeaderCard}>
-        <div className={classes.Hour}>
+    <div className={classes.content}>
+      <div className={classes.headerCard}>
+        <div className={classes.hour}>
           <img src={Clock} alt="Um relógio"></img>
           <span>Até {date} {hour}</span>
         </div>
         <img src={Cloud} alt="Uma nuuvem com um check" />
       </div>
-      <h1 className={classes.Title}>{title}</h1>
-      <div className={classes.FooterCard}>
+      <h1 className={classes.title}>{title}</h1>
+      <div className={classes.footerCard}>
         <div className={classes.Class}>
           <span>{subject}</span>
           <span>{teacher}</span>

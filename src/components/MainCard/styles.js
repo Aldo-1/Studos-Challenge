@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
-  Content: {
+  content: {
     background: ({ background, theme, colors }) => `url(${background}) no-repeat center center / cover, ${theme.colors[colors]}`,
     padding: '1.6rem',
     display: 'flex',
@@ -11,39 +11,39 @@ const useStyles = createUseStyles({
     position: 'relative',
     borderRadius: ({ theme }) => theme.border.radius
   },
-  Images: {
+  images: {
     display: 'flex',
     alignItems: 'center',
     '& img': {
       width: '100%'
     }
   },
-  ImageType: {
+  imageType: {
     position: 'absolute',
     bottom: '-7.03rem',
   },
-  ImageRelative: {
+  imageRelative: {
     width: '16.8rem',
     position: 'relative'
   },
-  Title: ({ theme }) => ({
+  title: ({ theme }) => ({
     color: theme.colors.white,
     maxWidth: '8rem',
     fontSize: theme.font.sizes.medium
   }),
   '@media (min-width: 540px)': {
-    Content: {
+    content: {
       padding: ({ theme }) => theme.spacings.xlarge,
     },
-    ImageRelative: {
+    imageRelative: {
 
       width: '20.8rem'
     },
-    ImageType: {
+    imageType: {
       bottom: '-6.9rem',
       right: '6.5rem'
     },
-    Title: () => ({
+    title: () => ({
       maxWidth: 'initial',
     })
   }
