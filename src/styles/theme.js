@@ -8,6 +8,7 @@ const theme = {
     white: '#FFFFFF',
     brown: '#ed8721',
     green: '#02c4c4',
+    silver: '#c4c4c4'
   },
   font: {
     fontFamily:
@@ -22,7 +23,9 @@ const theme = {
   },
   border: {
     radius: '0.6rem',
-    radius_two: '0.2rem'
+    radius_two: '0.2rem',
+    radius_check: '3.4rem',
+    radius_circle: '50%',
   },
   spacings: {
     xxsmall: '0.4rem',
