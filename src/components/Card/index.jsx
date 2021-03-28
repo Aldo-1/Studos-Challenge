@@ -19,7 +19,7 @@ const Card = ({ date, hour, title, subject, teacher, questionsCompleted, questio
       </div>
       <h1 className={classes.title}>{title}</h1>
       <div className={classes.footerCard}>
-        <div className={classes.Class}>
+        <div>
           <span>{subject}</span>
           <span>{teacher}</span>
         </div>
